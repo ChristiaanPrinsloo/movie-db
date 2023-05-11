@@ -42,14 +42,12 @@ async function getMovieDetails(movieId) {
   const timeframe = prompt("Please enter the timeframe for your movies and TV shows (XXX-XX-XX): ");
 
     // Choose from one of the many available sort options
-    
     // Available options : popularity.asc, popularity.desc, release_date.asc, release_date.desc, revenue.asc, revenue.desc, primary_release_date.asc, primary_release_date.desc, original_title.asc, original_title.desc, vote_average.asc, vote_average.desc, vote_count.asc, vote_count.desc
   const sortby = prompt("Please enter the sorting method for your movies and TV shows (ex. popularity.asc, primary_release_date.desc): ");
 
    // Sets max allowed results
   const maxResults = parseInt(prompt("Please enter the max results for your list of movies and TV shows: "));
   
-
   const movies = await getMovies(timeframe, sortby, maxResults);
   console.log('Movies:', movies);
 
